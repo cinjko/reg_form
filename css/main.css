@@ -1,0 +1,70 @@
+body {
+    font-family: verdana;
+    font-size: 12pt;
+    COLOR: grey;
+}
+
+b {
+    font-weight: bold;
+}
+
+table {
+    border: 1px solid gray;
+}
+
+td {
+    text-align: center;
+    padding: 25px;
+}
+
+.comments_out {
+    color: red;
+}
+
+.bottom-comment,
+.ip,
+.email,
+.name,
+.phone,
+.date {
+    color: gray;
+}
+
+
+div.form-wrapper {
+    width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 300px;
+}
+
+textarea {
+    height: 160px;
+}
+
+form label, p {
+    margin: 5px 0 15px 0 ;
+    color: red;
+}
+
+.info {
+    padding: 10px;
+}
+
+.date, .name {
+    display: inline;
+    padding-right: 20px;
+}
+
+.row {
+    padding: 10px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid grey;
+}
+
+.comments {
+    color: black;
+    width: 380px;
+}
