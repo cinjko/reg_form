@@ -7,45 +7,31 @@ class Form {
         $data	= array();
 
         if (!($data['name'] = filter_input(INPUT_POST, 'name', FILTER_CALLBACK, array('options' => 'Form::validate_text')))) {
-
-            $errors = 'Enter correct name!';
-            $_SESSION['name'] = "";
-
+            $errors = 'false';
         } else {
             $_SESSION['name'] = $data['name'];
         }
 
         if (!($data['email'] = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL))) {
-
-            $errors = 'Enter correct email!';
-            $_SESSION['email'] = "";
-
+            $errors = 'false';
         } else {
             $_SESSION['email'] = $data['email'];
         }
 
         if (!($data['phone'] = filter_input(INPUT_POST, 'phone', FILTER_CALLBACK, array('options' => 'Form::validatePhoneNumber')))) {
-
-            $errors = 'Enter correct phone!';
-            $_SESSION['phone'] = "";
-
+            $errors = 'false';
         } else {
             $_SESSION['phone'] = $data['phone'];
         }
 
         if (!($data['comments'] = filter_input(INPUT_POST, 'comments', FILTER_CALLBACK, array('options' => 'Form::validate_text')))) {
-
-            $errors = 'Enter comment!';
-            $_SESSION['comments'] = "";
-
+            $errors = 'false';
         } else {
             $_SESSION['comments'] = $data['comments'];
         }
 
-
         $data['comments_date'] = date('Y-m-d');
         $data['user_IP'] = $_SERVER['SERVER_ADDR'];
-
 
         if (!empty($errors)) {
             return false;
