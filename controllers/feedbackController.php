@@ -17,12 +17,13 @@ class FeedbackForm {
 
         if($data['name'] === "" || $data['email'] === "" || $data['phone'] === "" || $data['comments'] ==="") {
 
-            echo 'Please fill all required fields!';
+          echo "Fill all required fields!";
 
         } else {
 
             include_once "./models/feedbackModel.php";
             $result = Form::validate($data);
+
 
             if (is_array($result)) {
 
